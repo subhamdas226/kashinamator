@@ -1,0 +1,115 @@
+.container{
+    background: #181818;
+}
+nav{
+    
+    height: 80px;
+    width: 100%;
+    border-bottom: 1px solid rgb(21, 21, 21);
+}
+.spacer{
+    margin-right: 7%;
+}
+nav img{
+    /* font-size: 35px; */
+    
+     padding: 0;
+     margin-top: 1%; 
+
+}
+.logo{
+    
+    height: 60px;
+}
+nav ul{
+    float: right;
+    margin-right: 10%;
+    background-color: rgba(24, 24, 24, .9);
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+nav ul li a.active{
+    background:  rgb(255, 255, 255);
+    color: black;
+    font-size: 17px;
+    padding: 6px 10px;
+    border-radius: 10px;
+}
+a:hover{
+    background: gray;
+    transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    margin-right: 3%;
+    line-height: 50px;
+    /* margin-right: 40px; */
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media (max-width : 952px){
+    .logo{
+        padding:0;
+        height: 60px;
+    }
+    nav ul{
+        margin-right: 0;
+        overflow: hidden;
+        position: absolute;
+        z-index: 1;
+        background-color: rgba(0,0,0,.9);
+        overflow-x: hidden;
+        transition: 0.5s;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width : 858px){
+    .checkbtn{
+        display: block;
+    }
+    
+    ul{
+        margin-right: 0;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        /* background: #2c3e50; */
+        
+        top: 80px;
+        right: -100%;
+        text-align: center;
+        transition: all .5s ease;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover,a.active{
+        background: none;
+        color: #0082e6;
+    }
+    #check:checked ~ ul{
+        right: 0;
+    }
+}
