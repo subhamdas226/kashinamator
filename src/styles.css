@@ -8,4 +8,6 @@
     /* background-color: rgb(23, 23, 23); */
     /* background-color: rosybrown; */
     font-family: sans-serif;
+    max-width: 100%;
+    overflow-x: hidden;
 }
